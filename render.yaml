@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: mazali-design
+    name: mazali-interior-design
     runtime: static
     buildCommand: echo "static site - no build"
     staticPublishPath: .
