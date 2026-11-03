@@ -1,0 +1,8 @@
+# source material (originals) – the site uses the optimized copies in assets/
+/Projects/
+/LOGO/
+
+.claude/
+Thumbs.db
+.DS_Store
+desktop.ini
