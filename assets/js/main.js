@@ -2,9 +2,9 @@
 
 /* ---- Contact details: update these with the real ones ---- */
 const CONFIG = {
-  whatsapp: "972500000000",          // international format, no "+" or leading 0
-  phone: "050-000-0000",
-  email: "hello@mazali-design.co.il",
+  whatsapp: "972542050937",          // international format, no "+" or leading 0
+  phone: "054-205-0937",
+  email: "Mazali.intdesign@gmail.com",
   instagram: "mazali.design",        // handle only, without "@"
 };
 
