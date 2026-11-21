@@ -79,7 +79,8 @@ p { margin: 0 0 1em; }
 /* ---------- Header ---------- */
 .header {
   position: fixed; inset: 0 0 auto 0; z-index: 50; height: var(--header-h);
-  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  display: flex; flex-direction: row-reverse; /* logo on the left, menu/burger on the right */
+  align-items: center; justify-content: space-between; gap: 20px;
   padding: 0 var(--gutter);
   transition: background .3s, box-shadow .3s, height .3s;
 }
@@ -390,10 +391,10 @@ body.is-locked { overflow: hidden; }
   .burger[aria-expanded="true"] span:last-child { transform: translateY(-4.5px) rotate(-45deg); }
   .nav {
     position: fixed; inset: 0; z-index: 55; background: var(--cream); flex-direction: column; justify-content: center;
-    gap: 26px; clip-path: circle(0 at 0 0); visibility: hidden;
+    gap: 26px; clip-path: circle(0 at 100% 0); visibility: hidden;
     transition: clip-path .6s var(--ease), visibility 0s .6s;
   }
-  .nav.is-open { clip-path: circle(150% at 0 0); visibility: visible; transition-delay: 0s; }
+  .nav.is-open { clip-path: circle(150% at 100% 0); visibility: visible; transition-delay: 0s; }
   .nav a:not(.btn) { font: 2rem var(--font-display); }
   .nav .btn { font-size: 1.1rem; padding: 14px 34px; }
 }
