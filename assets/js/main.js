@@ -6,34 +6,87 @@ const CONFIG = {
   phone: "054-205-0937",
   email: "Mazali.intdesign@gmail.com",
   instagram: "mazali.design",        // handle only, without "@"
+  // pre-filled text when someone taps a WhatsApp button
+  whatsappText: "היי מזלי, הגעתי מהאתר ואשמח לשמוע על עיצוב הבית שלי 🙂",
 };
 
 /* ---- Projects: images live in assets/img/projects/<slug>/NN.jpg (+ NN-sm.jpg) ---- */
 const PROJECTS = [
   {
-    slug: "triplex-modiin", count: 16, cover: 1, tag: "טריפלקס · מודיעין",
-    title: "טריפלקס במודיעין",
-    desc: "שלוש קומות, סיפור אחד: קיר לבנים בהיר, ספריית מתכת שחורה שמחלקת את החלל, סלון רך בגווני חול ותכלת, ושירותי אורחים בירוק עמוק שגונבים את ההצגה.",
+    slug: "triplex-modiin", count: 16, cover: 1, tag: "בית פרטי · מודיעין",
+    title: "בית פרטי במודיעין",
+    desc: [
+      "שלוש קומות, סיפור אחד.",
+      "הילדים מתחילים לצאת מהקן וזה הזמן שלי להיכנס ולשדרג. הם חיכו לזה בסבלנות והגיע הזמן לשינוי שישדרג להם את איכות החיים.",
+      "\"מזלי, אנחנו רוצים חדר הורים כמו בבית מלון. חדר רחצה ענק וחדר ארונות. מה את אומרת, זה אפשרי?\"",
+      "אז זה בדיוק מה שעשינו. תכננו חלוקת חלל חדשה בקומה העליונה ויצאנו לשיפוץ קומפלט.. הגשמנו חלום ואז הגיע תורה של הקומה הראשונה.",
+      "\"אנחנו אוהבים את המטבח, יש מה לעשות איתו?\"",
+      "אז ברור שיש.. צבענו, החלפנו ידיות, נשארנו עם קיר הבריקים ופשוט שדרגנו את החלל המרכזי שיתאים בדיוק לסגנון החדש.",
+      "משפחה שנכנסה לי ללב ונתנה לי את כל האישורים להשתגע…",
+    ],
   },
   {
     slug: "cabins", count: 13, cover: 1, tag: "צימרים · מושב",
     title: "מתחם צימרים במושב",
-    desc: "עץ, אור חם וירוק מרווה. צימרים שמזמינים להאט – עם מטבחונים בגוון מרווה, פינות ישיבה רכות ומתחם דשא עם סוכות קש לשקיעה המושלמת.",
+    desc: [
+      "החלום שלי, בית עץ. הכל בלי יוצא מן הכלל בנוי מעץ. הקירות, הרצפה והגג. מפה אפשר רק להשתגע..",
+      "2 יחידות שעיצבנו בסגנון כפרי עדין. יחידות של שני חדרים, מטבח וחלל מרכזי + חדר שינה מפנק ומזמין עם אופציה לשהות ארוכה. ארון אחסון גדול בחדר כולל פינת עבודה.",
+      "יש יותר מפנק מזה?",
+    ],
   },
   {
-    slug: "ganei-tikva", count: 12, cover: 1, tag: "דירה · גני תקווה",
-    title: "דירה בגני תקווה",
-    desc: "בית בהיר ונקי עם עץ טבעי בכל פינה, קיר ירוק שעוטף את פינת הטלוויזיה, ספריית תצוגה מוארת, ומקלחת עם אריחים מצוירים שמוסיפים קריצה.",
+    slug: "ganei-tikva", count: 12, cover: 1, tag: "בית נגיש · קריית אונו",
+    title: "שיפוץ לבית נגיש בקריית אונו",
+    desc: [
+      "\"מזלי מה שלומך? קיבלתי את המספר שלך ואני אשמח שתגיעי לעצב לי את בית החלומות שלי\"",
+      "הלקוחה שלי החלימה מסרטן וביקשה בית חלומות מפנק. תוך כדי תכנון חדש לבית, היא התקשרה בוכה, שבית החלומות זה כבר לא יהיה והיא צריכה בית נגיש.",
+      "מיד הרגעתי אותה שבית חלומות יכול להיות נגיש ואנחנו ממשיכים בתוכניות חדשות עם אותה מטרה. חידשנו, הגדלנו, פתחנו והדגשנו שהבית נגיש, בלי שבכלל ישימו לב.",
+      "אז לא שמנו שטיחים וגם לא זכוכיות במקלחת. והספסל ליד המיטה? היה חלום שלה לשבת על אדן החלון.. ועכשיו הוא גם נגיש לה בישיבה על המיטה.",
+      "הטלפון בסיום הפרויקט גרם לי להתרגש ורק הדגיש לי את מה שתמיד ידעתי. עיצוב פנים הוא לא רק יופי ואסתטיקה, הוא גם משנה חיים.",
+      "\"מזלי, בבית חולים רצו להעביר אותי לדיור מוגן בסיום האשפוז. שלחתי נציג אליי הביתה שיבין ששום דיור מוגן לא יהיה פה. אני גרה בבית שלי, בזכותך.\"",
+    ],
   },
   {
-    slug: "modiin-3", count: 13, cover: 1, tag: "3 חדרים · מודיעין",
-    title: "3 חדרים במודיעין",
-    desc: "מטבח בגווני תכלת-אפור עם ידיות זהב ומשטח עץ חם, אי ישיבה לכל המשפחה, וסלון רחב שנפתח לנוף. קלאסי, רך, ומלא חיים.",
+    slug: "modiin-3", count: 13, cover: 1, tag: "חלל מרכזי · מודיעין",
+    title: "שיפוץ חלל מרכזי במודיעין",
+    desc: [
+      "הם קנו את דירת החלומות שלהם וביקשו להתמקד רק בחלל המרכזי. למה? כי בית לא בונים ביום אחד.",
+      "תכננו מחדש את אזור המטבח, הגדלנו אותו, סידרנו סלון מרווח ונעים והשקענו בדיוק במה שצריך.",
+      "משפחה מיוחדת שרצתה לעשות את זה בצעדים, והנה אחרי 3 שנים, אנחנו עובדים על החללים האחרים בבית.. נעדכן בהמשך :)",
+    ],
   },
   {
-    slug: "kiryat-ono", count: 12, cover: 1, tag: "3 חדרים · קריית אונו",
-    title: "3 חדרים בקריית אונו",
-    desc: "דירה משפחתית עם פופ של טורקיז: קיר סלון צבעוני, ספריית נישה בהתאמה אישית, וחדר ילדים עם פינת עבודה ומשולש כתום שעושה שמח.",
+    slug: "kiryat-ono", count: 12, cover: 1, tag: "5 חדרים · קריית אונו",
+    title: "שיפוץ דירת 5 חדרים בקריית אונו",
+    desc: [
+      "הם הגיעו אליי מהמלצות, בדיוק הרחיבו את התא המשפחתי ורצו להפוך את הבית לנעים.",
+      "הם לא רצו שיהיה צבע בבית. קירות צבעוניים? שלא תעזי!",
+      "אז העזנו, וניסינו, וידעתי שיכול להיות שהכל יימחק וייצבע ללבן. עשיתי הדמיות ועדיין, הרגשתי שיכול להיות שהתוצאה לא תהיה לטובתי.",
+      "אז אחרי הצבע, היא התקשרה להגיד שזה מוסיף לבית. ושהם ישאירו ונראה…",
+      "אני לא מתעקשת על הרבה דברים. אבל צבע הוא חלק מהאפיון של הבית. אז הכנסנו אותו בקיר ולא בריהוט כדי שנוכל מהר לשנות..",
+      "הקשבה לשני הצדדים חשובה מאוד בתהליך עיצוב הבית. במיוחד כשלקחתם מעצבת.",
+    ],
+  },
+  {
+    slug: "nursing-clinic", count: 9, cover: 1, tag: "קליניקה · תכנון וביצוע",
+    title: "קליניקת הנקה",
+    desc: [
+      "היא תמיד חיכתה לפתוח קליניקה ואז זה הגיע, היא תפתח אותה בבית. המחסן הופך לקליניקה.",
+      "התקשרה אליי ומיד יצאנו לעבודה. את הפרויקט הזה לקחתי גם בתכנון וגם בביצוע שלו.",
+      "מי שמכיר אותי יודע שאני כל כך אוהבת לחדש ריהוט, להשתמש בקיים, להדביק, ליצור. וכאן זאת הייתה ההזדמנות שלי.",
+      "עשינו תוכנית, צבענו את החדר, הדבקנו פרקט ואני הדבקתי את הטפט..",
+      "וביחד יצרנו חדר חדש בבית שמיועד ללקוחות שלה, בתקציב נמוך ובעשייה מרובה.",
+    ],
+  },
+  {
+    slug: "shoham-kitchen", count: 8, cover: 1, tag: "מטבח · שוהם",
+    title: "מטבח בשוהם",
+    desc: [
+      "היא התקשרה אליי אחרי שהיא שברה את המטבח שלה. המקום המרכזי של הבית, קודם היא שברה אותו ואז התקשרה..",
+      "אז נכון, זו לא הדרך. קודם כל עושים תכנון ורק לאחר מכן שוברים.",
+      "היא נשארה בלי מטבח כמעט חצי שנה. עד שהתוכניות לא היו מושלמות לא יצאנו לדרך. הדמיות ששינו כיוון, תוכניות שבוטלו והתחדשו.",
+      "והתוצאה? תשפטו לבד.",
+    ],
   },
 ];
 
@@ -42,8 +95,9 @@ const pad = n => String(n).padStart(2, "0");
 const img = (slug, n, small) => `assets/img/projects/${slug}/${pad(n)}${small ? "-sm" : ""}.jpg`;
 
 /* ---- Contact links ---- */
+const waBase = `https://wa.me/${CONFIG.whatsapp}`;
 const links = {
-  whatsapp: `https://wa.me/${CONFIG.whatsapp}`,
+  whatsapp: `${waBase}?text=${encodeURIComponent(CONFIG.whatsappText)}`,
   phone: `tel:${CONFIG.phone.replace(/[^\d+]/g, "")}`,
   email: `mailto:${CONFIG.email}`,
   instagram: `https://instagram.com/${CONFIG.instagram}`,
@@ -91,7 +145,7 @@ const observeReveal = root => root.querySelectorAll(".reveal:not(.is-in)").forEa
 const grid = $("#projectGrid");
 grid.innerHTML = PROJECTS.map((p, i) => `
   <button class="proj reveal" data-i="${i}" aria-label="${p.title} – לצפייה בגלריה">
-    <img src="${img(p.slug, p.cover, i > 1)}" alt="" loading="lazy">
+    <img src="${img(p.slug, p.cover, i >= 2 && i <= 4)}" alt="" loading="lazy">
     <span class="proj__more" aria-hidden="true">↖</span>
     <span class="proj__info">
       <span class="proj__tag">${p.tag}</span>
@@ -100,65 +154,98 @@ grid.innerHTML = PROJECTS.map((p, i) => `
   </button>`).join("");
 observeReveal(document);
 
-/* ---- Modal ---- */
-const modal = $("#modal"), gallery = $("#gallery");
-let current = null, lastFocus = null;
+/* ---- Project viewer: text on top, one large image at a time, thumbnails ---- */
+const lb = $("#lightbox"), lbImg = $("#lbImg"), lbCount = $("#lbCount"), lbThumbs = $("#lbThumbs");
+let current = null, idx = 1, lastFocus = null;
+const wrap = n => (n - 1 + current.count) % current.count + 1;
 
-function openModal(i) {
-  current = PROJECTS[i];
-  lastFocus = document.activeElement;
-  $("#modalTag").textContent = current.tag;
-  $("#modalTitle").textContent = current.title;
-  $("#modalDesc").textContent = current.desc;
-  gallery.innerHTML = Array.from({ length: current.count }, (_, k) => `
-    <button data-n="${k + 1}" aria-label="תמונה ${k + 1} מתוך ${current.count}">
-      <img src="${img(current.slug, k + 1, true)}" alt="${current.title} – תמונה ${k + 1}" loading="lazy">
-    </button>`).join("");
-  modal.hidden = false;
-  modal.querySelector(".modal__panel").scrollTop = 0;
-  document.body.classList.add("is-locked");
-  requestAnimationFrame(() => modal.classList.add("is-open"));
-  $(".modal__close").focus();
-}
-function closeModal() {
-  modal.classList.remove("is-open");
-  document.body.classList.remove("is-locked");
-  setTimeout(() => { modal.hidden = true; }, 350);
-  lastFocus && lastFocus.focus();
-}
-grid.addEventListener("click", e => {
-  const b = e.target.closest(".proj");
-  if (b) openModal(+b.dataset.i);
-});
-modal.addEventListener("click", e => {
-  if (e.target === modal || e.target.closest("[data-close]")) closeModal();
-  const b = e.target.closest(".gallery button");
-  if (b) openLightbox(+b.dataset.n);
-});
-
-/* ---- Lightbox ---- */
-const lb = $("#lightbox"), lbImg = $("#lbImg"), lbCount = $("#lbCount");
-let idx = 1;
 function showImage(n) {
-  idx = (n - 1 + current.count) % current.count + 1;
+  idx = wrap(n);
+  lbImg.classList.add("is-loading");
+  lbImg.onload = () => lbImg.classList.remove("is-loading");
   lbImg.src = img(current.slug, idx);
+  if (lbImg.complete) lbImg.classList.remove("is-loading");
   lbImg.alt = `${current.title} – תמונה ${idx}`;
   lbCount.textContent = `${idx} / ${current.count}`;
-  // preload neighbours
-  [idx + 1, idx - 1].forEach(k => { new Image().src = img(current.slug, (k - 1 + current.count) % current.count + 1); });
+  lbThumbs.querySelectorAll("button").forEach(b => {
+    const on = +b.dataset.n === idx;
+    b.classList.toggle("is-active", on);
+    if (on) { b.setAttribute("aria-current", "true"); b.scrollIntoView({ block: "nearest", inline: "nearest" }); }
+    else b.removeAttribute("aria-current");
+  });
+  [idx + 1, idx - 1].forEach(k => { new Image().src = img(current.slug, wrap(k)); });  // preload neighbours
 }
-function openLightbox(n) { showImage(n); lb.hidden = false; $(".lightbox__close").focus(); }
-function closeLightbox() { lb.hidden = true; const b = gallery.querySelector(`[data-n="${idx}"]`); b && b.focus(); }
+/* Desktop: the story column must fit without scrolling, so shrink the text until it does */
+const desktop = matchMedia("(min-width: 961px)");
+function fitStory() {
+  const head = $(".lightbox__head"), desc = $("#lbDesc");
+  desc.style.fontSize = "";
+  if (!desktop.matches || lb.hidden) return;
+  let size = 1.08;                                    // rem, same as the CSS default
+  desc.style.fontSize = size + "rem";
+  while (head.scrollHeight > head.clientHeight + 1 && size > 0.72) {
+    size -= 0.02;
+    desc.style.fontSize = size.toFixed(2) + "rem";
+  }
+}
+addEventListener("resize", fitStory);
 
+function openProject(i) {
+  current = PROJECTS[i];
+  lastFocus = document.activeElement;
+  $("#lbTag").textContent = current.tag;
+  $("#lbTitle").textContent = current.title;
+  const paras = [].concat(current.desc || []);
+  const desc = $("#lbDesc");
+  desc.replaceChildren(...paras.map(t => Object.assign(document.createElement("p"), { textContent: t })));
+  desc.classList.remove("is-open");
+  $("#lbMore").hidden = paras.length < 2;
+  $("#lbMore").textContent = "לסיפור המלא ↓";
+  lbThumbs.innerHTML = Array.from({ length: current.count }, (_, k) => `
+    <button data-n="${k + 1}" aria-label="תמונה ${k + 1} מתוך ${current.count}">
+      <img src="${img(current.slug, k + 1, true)}" alt="" loading="lazy">
+    </button>`).join("");
+  setZoom(false);
+  lb.hidden = false;
+  document.body.classList.add("is-locked");
+  showImage(current.cover || 1);
+  fitStory();
+  document.fonts?.ready.then(fitStory);
+  $(".lightbox__close").focus();
+}
+const setZoom = on => {
+  lb.classList.toggle("is-zoomed", on);
+  $(".lightbox__close").setAttribute("aria-label", on ? "חזרה לפרויקט" : "סגירה");
+};
+function closeLightbox() {
+  if (lb.classList.contains("is-zoomed")) return setZoom(false);  // first step back: leave full-screen
+  lb.hidden = true;
+  document.body.classList.remove("is-locked");
+  lastFocus && lastFocus.focus();
+}
+
+grid.addEventListener("click", e => {
+  const b = e.target.closest(".proj");
+  if (b) openProject(+b.dataset.i);
+});
 lb.addEventListener("click", e => {
   const act = e.target.closest("[data-lb]")?.dataset.lb;
-  if (act === "close" || e.target === lb) closeLightbox();
+  if (act === "close") closeLightbox();
   if (act === "next") showImage(idx + 1);
   if (act === "prev") showImage(idx - 1);
+  if (act === "more") {
+    const open = $("#lbDesc").classList.toggle("is-open");
+    e.target.textContent = open ? "סגירה ↑" : "לסיפור המלא ↓";
+    $("#lbDesc").scrollTop = 0;
+  }
+  if (e.target === lbImg) setZoom(!lb.classList.contains("is-zoomed"));
+  const t = e.target.closest(".lightbox__thumbs button");
+  if (t) showImage(+t.dataset.n);
 });
 let touchX = null;
-lb.addEventListener("touchstart", e => { touchX = e.touches[0].clientX; }, { passive: true });
-lb.addEventListener("touchend", e => {
+const stage = $(".lightbox__stage");
+stage.addEventListener("touchstart", e => { touchX = e.touches[0].clientX; }, { passive: true });
+stage.addEventListener("touchend", e => {
   if (touchX === null) return;
   const dx = e.changedTouches[0].clientX - touchX;
   // RTL: swiping right moves forward
@@ -171,8 +258,7 @@ addEventListener("keydown", e => {
     if (e.key === "Escape") closeLightbox();
     if (e.key === "ArrowLeft") showImage(idx + 1);
     if (e.key === "ArrowRight") showImage(idx - 1);
-  } else if (!modal.hidden && e.key === "Escape") closeModal();
-  else if (nav.classList.contains("is-open") && e.key === "Escape") setNav(false);
+  } else if (nav.classList.contains("is-open") && e.key === "Escape") setNav(false);
 });
 
 /* ---- Contact form → WhatsApp ---- */
@@ -193,7 +279,7 @@ form.addEventListener("submit", e => {
     d.get("msg").trim() && `קצת פרטים: ${d.get("msg").trim()}`,
     `טלפון: ${phone}`,
   ].filter(Boolean).join("\n");
-  window.open(`${links.whatsapp}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+  window.open(`${waBase}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
   note.textContent = "מעולה! פתחנו לך את וואטסאפ עם ההודעה מוכנה 💚";
   form.reset();
 });
