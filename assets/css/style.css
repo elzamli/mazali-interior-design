@@ -410,6 +410,11 @@ body.is-locked { overflow: hidden; }
   .hero__cta { justify-content: center; }
   .hero__art { max-width: 420px; margin-top: 30px; }
   .about, .contact { grid-template-columns: 1fr; }
+  /* phone/tablet: heading → form → my contact details (desktop keeps the two columns) */
+  .contact { row-gap: 0; }
+  .contact__text { display: contents; }
+  .contact .form { order: 1; margin-top: 28px; }
+  .contact__links { order: 2; margin-top: 32px; }
   .about__media { max-width: 460px; margin-inline: auto; width: 100%; }
   .cards { grid-template-columns: 1fr 1fr; }
   .card, .card:nth-child(4) { grid-column: span 1; }
